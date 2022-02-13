@@ -1,0 +1,50 @@
+<div class="box">
+    <mat-selection-list [multiple]="false">
+        <a routerLink="/home" routerLinkActive="active">
+            <mat-list-option>
+                <div class="center-vertically">
+                    <mat-icon matListIcon >home</mat-icon>
+                    Home
+                </div>
+            </mat-list-option>
+        </a>
+        <a routerLink="/dataset" [queryParams]="{addNewDataset: true}">
+            <mat-list-option>
+                <div class="center-vertically">
+                    <mat-icon matListIcon >note_add</mat-icon>
+                    Add New DataSet
+                </div>
+            </mat-list-option>
+        </a>
+        <a routerLink="/dataset" routerLinkActive="active">
+            <mat-list-option>
+                <div class="center-vertically">
+                    <mat-icon matListIcon >library_books</mat-icon>
+                    DataSet
+                </div>
+            </mat-list-option>
+        </a>
+        <a routerLink="/code" routerLinkActive="active">
+            <mat-list-option>
+                <div class="center-vertically">
+                    <mat-icon matListIcon >create</mat-icon>
+                    Code
+                </div>
+            </mat-list-option>
+        </a>
+        <a routerLink="/question-answer" routerLinkActive="active"><mat-list-option>
+            <div class="center-vertically">
+                <mat-icon matListIcon >question_answer</mat-icon>
+                Question / Answer ?
+            </div>
+        </mat-list-option></a>
+        <a routerLink="/try-your-model" routerLinkActive="active">
+            <mat-list-option>
+                <div class="center-vertically">
+                    <mat-icon matListIcon >repeat</mat-icon>
+                    Try your Model
+                </div>
+            </mat-list-option>
+        </a>
+    </mat-selection-list>
+</div>

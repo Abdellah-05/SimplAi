@@ -1,0 +1,15 @@
+.navbar{
+    color: white; 
+    background-color:#ff7474
+}
+
+.box{
+    display: flex;
+    align-items:center;
+    float: left;
+    height: 40px;
+}
+
+.example-spacer{
+    flex: 1 1 auto;
+}

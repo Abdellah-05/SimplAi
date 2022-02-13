@@ -1,0 +1,42 @@
+<div class="dialog">
+    <h2 mat-dialog-title style="text-align: center;">Add New Dataset</h2>
+    <mat-dialog-content class="mat-typography">
+        <div>
+            <div class="navbar">
+                <mat-selection-list style="margin-bottom: auto;"  [multiple]="false">
+                    <a (click)="showOption_1()">
+                        <mat-list-option>
+                            <fa-icon id="myIcon" [icon]="faFolderPlus"></fa-icon>
+                        </mat-list-option>
+                    </a>
+                    <a (click)="showOption_2()">
+                        <mat-list-option>
+                            <fa-icon id="myIcon" [icon]="faGithub"></fa-icon>
+                        </mat-list-option>
+                    </a>
+                    <a (click)="showOption_3()">
+                        <mat-list-option>
+                            <fa-icon id="myIcon" [icon]="faGoogleDrive"></fa-icon>
+                        </mat-list-option>
+                    </a>
+                    <a (click)="showOption_4()">
+                        <mat-list-option>
+                            <fa-icon id="myIcon" [icon]="faDropbox"></fa-icon>
+                        </mat-list-option>
+                    </a>
+                </mat-selection-list>
+            </div>
+
+            <div class="content">
+                <app-add-with-mydesktop *ngIf="dialog_1"></app-add-with-mydesktop>
+                <app-add-with-github *ngIf="dialog_2"></app-add-with-github>
+                <app-add-with-googledrive *ngIf="dialog_3"></app-add-with-googledrive>
+                <app-add-with-dropbox *ngIf="dialog_4"></app-add-with-dropbox>
+            </div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true"  cdkFocusInitial>Create</button>
+    </mat-dialog-actions>
+</div>

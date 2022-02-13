@@ -1,0 +1,163 @@
+<mat-card-title-group>
+    <mat-card-title>Code</mat-card-title> 
+    <mat-card-subtitle>
+        Explore and run machine learning code with SimpleAI Notebooks.
+      <br><br>
+      <button type="button" class="btn btn-dark btn-rounded"> <fa-icon [icon]="faPlus"></fa-icon> New Notebook</button>
+      <button style="margin-left: 15px;" type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark">Your Notebooks</button>
+    </mat-card-subtitle>
+    <img mat-card-xl-image src="../../assets/images/notebook.png" >
+  </mat-card-title-group>
+  <mat-card-content>
+      <div class="content">
+          <div class="input-group">
+              <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+              <button type="button" class="btn btn-info btn-rounded">
+                  search
+              </button>
+          </div>
+
+          <div>
+              <mat-chip-list class="example-chip">
+                  <mat-chip
+                      type="button" 
+                      class="example-box btn btn-rounded"
+                      *ngFor="let dataset of datasets">
+                      {{dataset.name}}
+                  </mat-chip>
+              </mat-chip-list>
+          </div>  
+          
+          <div>
+              <mat-toolbar class="option">
+                  <span class="navbar-brand mb-0 h1 "> 
+                      <mat-icon> border_all</mat-icon> 
+                      <strong style="margin-left: 10px;"> 
+                          9,800 Datasets
+                      </strong> 
+                  </span>
+                  <span class="example-spacer"></span>
+                  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                      <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item>
+                        <mat-icon>trending_up</mat-icon>
+                        <span>Hotness</span>
+                      </button>
+                      <button mat-menu-item>
+                        <mat-icon>fiber_new</mat-icon>
+                        <span>New</span>
+                      </button>
+                      <button mat-menu-item>
+                        <mat-icon>visibility</mat-icon>
+                        <span>Most Liked</span>
+                      </button>
+                    </mat-menu>
+                    
+              </mat-toolbar>
+          </div>
+
+          <div>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                  <div class="card">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                          This is a longer card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.
+                      </p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                          <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                              This is a longer card with supporting text below as a natural lead-in to
+                              additional content. This content is a little bit longer.
+                          </p>
+                          </div>
+                      </div>
+                      </div>
+                  <div class="col">
+                  <div class="card">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                          This is a longer card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.
+                      </p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col">
+                  <div class="card">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road"/>
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                          This is a longer card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.
+                      </p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col">
+                  <div class="card">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+                          <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+                          <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+                          <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                  <div class="card">
+                      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                          This is a longer card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.
+                      </p>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</mat-card-content>
+  
