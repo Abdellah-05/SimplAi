@@ -13,6 +13,6 @@ export class DatasetsKaggleService {
    }
    
    getDatasetsKaggle():Observable<any>{
-     return this.http.get(`${this.BASE_URL}`);
+     return this.http.get(`${this.BASE_URL}/dataset_kaggle`);
    }
 }
