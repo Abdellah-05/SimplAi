@@ -1,133 +1,138 @@
 <div>
-    <div style="margin-bottom: 10px;" class="input-group">
-        <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-        <button type="button" class="btn btn-info btn-rounded">
-            search
-        </button>
-    </div>
-    <div>
-        <mat-toolbar class="option">
-            <span class="results">7733 Results</span>
-            <mat-form-field appearance="standard">
-                <mat-label>Sort By:</mat-label>
-                <select matNativeControl required>
-                  <option value="Relevancy">Relevancy</option>
-                  <option value="Date">Date</option>
-                </select>
-            </mat-form-field>
-        </mat-toolbar>
-    </div>
-    <div>
-        <mat-grid-list cols="6">
-            <mat-grid-tile [colspan]="4" [rowspan]="6">
-                <div>
-                    <a href="http://localhost:4200/home">
-                        <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                            <mat-card-title-group>
-                              <mat-card-title>Shiba Inu</mat-card-title>
-                              <mat-card-subtitle>Small</mat-card-subtitle>
-                              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                            </mat-card-title-group>
-                            <mat-card-content>
-                              {{longText}}
-                            </mat-card-content>
-                        </mat-card>
-                    </a>
-                    <a href="http://localhost:4200/home">
-                        <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                            <mat-card-title-group>
-                              <mat-card-title>Shiba Inu</mat-card-title>
-                              <mat-card-subtitle>Small</mat-card-subtitle>
-                              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                            </mat-card-title-group>
-                            <mat-card-content>
-                              {{longText}}
-                            </mat-card-content>
-                        </mat-card>
-                    </a>
-                    <a href="http://localhost:4200/home">
-                        <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                            <mat-card-title-group>
-                              <mat-card-title>Shiba Inu</mat-card-title>
-                              <mat-card-subtitle>Small</mat-card-subtitle>
-                              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                            </mat-card-title-group>
-                            <mat-card-content>
-                              {{longText}}
-                            </mat-card-content>
-                        </mat-card>
-                    </a>
-                    <a href="http://localhost:4200/home">
-                        <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                            <mat-card-title-group>
-                              <mat-card-title>Shiba Inu</mat-card-title>
-                              <mat-card-subtitle>Small</mat-card-subtitle>
-                              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                            </mat-card-title-group>
-                            <mat-card-content>
-                              {{longText}}
-                            </mat-card-content>
-                        </mat-card>
-                    </a>
-                    <a href="http://localhost:4200/home">
-                        <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                            <mat-card-title-group>
-                              <mat-card-title>Shiba Inu</mat-card-title>
-                              <mat-card-subtitle>Small</mat-card-subtitle>
-                              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                            </mat-card-title-group>
-                            <mat-card-content>
-                              {{longText}}
-                            </mat-card-content>
-                        </mat-card>
-                    </a>
-                    <a href="http://localhost:4200/home">
-                        <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                            <mat-card-title-group>
-                              <mat-card-title>Shiba Inu</mat-card-title>
-                              <mat-card-subtitle>Small</mat-card-subtitle>
-                              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                            </mat-card-title-group>
-                            <mat-card-content>
-                              {{longText}}
-                            </mat-card-content>
-                        </mat-card>
-                    </a>
-                    
+  <div style="margin-bottom: 10px;" class="input-group">
+      <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+      <button type="button" class="btn btn-info btn-rounded">
+          search
+      </button>
+  </div>
+  <div>
+      <mat-toolbar class="option">
+          <span class="results">7733 Results</span>
+          <mat-form-field appearance="standard">
+              <mat-label>Sort By:</mat-label>
+              <select matNativeControl required>
+                <option value="Relevancy">Relevancy</option>
+                <option value="Date">Date</option>
+              </select>
+          </mat-form-field>
+      </mat-toolbar>
+  </div>
+  <div>
+      <mat-grid-list cols="6">
+          <mat-grid-tile [colspan]="4" [rowspan]="6">
+              <div>
+                <div *ngFor="let DatasetsKaggle of DatasetsKaggleArray">
+                  <p>{{DatasetsKaggle.url}}</p>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile [colspan]="2" [rowspan]="4">
-                <div class="cardUser">
-                    <mat-card class="example-card">
-                        <mat-card-header>
-                          <div mat-card-avatar class="example-header-image"></div>
-                          <mat-card-title>Benmessaoud Abdellah</mat-card-title>
-                          <mat-card-subtitle>Joined 2 mouths ago</mat-card-subtitle>
-                        </mat-card-header>
-                        <hr>
+                
+                  <a href="http://localhost:4200/home">
+                    <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
+                        <mat-card-title-group>
+                          <mat-card-title>Shiba Inu</mat-card-title>
+                          <mat-card-subtitle>Small</mat-card-subtitle>
+                          <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                        </mat-card-title-group>
                         <mat-card-content>
-                          <div style="margin: auto; text-align: center;">
-                            <p class="text_icon">
-                              <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Download :
-                            </p>
-                            <p class="text_icon">45 <mat-icon style="margin-left: 5px;">save_alt</mat-icon></p>
-                            <p class="text_icon">
-                              <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Upload :
-                            </p>
-                            <p class="text_icon">876 <mat-icon style="margin-left: 5px;">publish</mat-icon></p>
-                            <p class="text_icon">
-                              <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Likes :
-                            </p>
-                            <p class="text_icon">1007 <mat-icon style="margin-left: 5px;">thumb_up</mat-icon></p>
-                            <p class="text_icon">
-                              <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Comments :
-                            </p>
-                            <p class="text_icon">78 <mat-icon style="margin-left: 5px;">comment</mat-icon></p>
-                          </div>
+                          {{longText}}
                         </mat-card-content>
-                      </mat-card>                      
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
-    </div>
+                    </mat-card>
+                  </a>
+                
+                
+                  <!-- <a href="http://localhost:4200/home">
+                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
+                          <mat-card-title-group>
+                            <mat-card-title>Shiba Inu</mat-card-title>
+                            <mat-card-subtitle>Small</mat-card-subtitle>
+                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                          </mat-card-title-group>
+                          <mat-card-content>
+                            {{longText}}
+                          </mat-card-content>
+                      </mat-card>
+                  </a>
+                  <a href="http://localhost:4200/home">
+                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
+                          <mat-card-title-group>
+                            <mat-card-title>Shiba Inu</mat-card-title>
+                            <mat-card-subtitle>Small</mat-card-subtitle>
+                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                          </mat-card-title-group>
+                          <mat-card-content>
+                            {{longText}}
+                          </mat-card-content>
+                      </mat-card>
+                  </a>
+                  <a href="http://localhost:4200/home">
+                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
+                          <mat-card-title-group>
+                            <mat-card-title>Shiba Inu</mat-card-title>
+                            <mat-card-subtitle>Small</mat-card-subtitle>
+                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                          </mat-card-title-group>
+                          <mat-card-content>
+                            {{longText}}
+                          </mat-card-content>
+                      </mat-card>
+                  </a>
+                  <a href="http://localhost:4200/home">
+                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
+                          <mat-card-title-group>
+                            <mat-card-title>Shiba Inu</mat-card-title>
+                            <mat-card-subtitle>Small</mat-card-subtitle>
+                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                          </mat-card-title-group>
+                          <mat-card-content>
+                            {{longText}}
+                          </mat-card-content>
+                      </mat-card>
+                  </a>
+                  <a href="http://localhost:4200/home">
+                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
+                          <mat-card-title-group>
+                            <mat-card-title>Shiba Inu</mat-card-title>
+                            <mat-card-subtitle>Small</mat-card-subtitle>
+                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+                          </mat-card-title-group>
+                          <mat-card-content>
+                            {{longText}}
+                          </mat-card-content>
+                      </mat-card>
+                  </a> -->        
+              </div>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="2" [rowspan]="4">
+              <div class="cardUser">
+                  <mat-card class="example-card">
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Benmessaoud Abdellah</mat-card-title>
+                        <mat-card-subtitle>Joined 2 mouths ago</mat-card-subtitle>
+                      </mat-card-header>
+                      <hr>
+                      <mat-card-content>
+                        <div style="margin: auto; text-align: center;">
+                          <p class="text_icon">
+                            <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Download :
+                          </p>
+                          <p class="text_icon">45 <mat-icon style="margin-left: 5px;">save_alt</mat-icon></p>
+                          <p class="text_icon">
+                            <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Upload :
+                          </p>
+                          <p class="text_icon">876 <mat-icon style="margin-left: 5px;">publish</mat-icon></p>
+                          <p class="text_icon">
+                            <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Likes :
+                          </p>
+                          <p class="text_icon">1007 <mat-icon style="margin-left: 5px;">thumb_up</mat-icon></p>
+                          <p class="text_icon">
+                            <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Comments :
+                          </p>
+                          <p class="text_icon">78 <mat-icon style="margin-left: 5px;">comment</mat-icon></p>
+                        </div>
+                      </mat-card-content>
+                    </mat-card>                      
+              </div>
+          </mat-grid-tile>
+      </mat-grid-list>
+  </div>
 </div>

@@ -11,8 +11,8 @@ import time
 
 class GetDataset:
     def __init__(self):
-        os.environ['KAGGLE_USERNAME'] = 'abdellahelaaroub'
-        os.environ['KAGGLE_KEY'] = 'f6a4b8dfccbbef8c72f5bb2f97429eee'
+        os.environ['KAGGLE_USERNAME'] = 'benmessaoud1abdellah'  #'abdellahelaaroub'
+        os.environ['KAGGLE_KEY'] = '0d74a846439df0a0cb3729498ed92582'  #'f6a4b8dfccbbef8c72f5bb2f97429eee'
         self.api = KaggleApi()
         self.api.authenticate()
     

@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    a = str(input('name of dataset  :  '))
+    a = "titanic"
     newdata = getDataset.GetDataset()
     alldata = newdata.dataset(a)
     #print(alldata)
