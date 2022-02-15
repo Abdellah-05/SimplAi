@@ -7,7 +7,7 @@
   </div>
   <div>
       <mat-toolbar class="option">
-          <span class="results">7733 Results</span>
+          <span class="results">{{a}} Results</span>
           <mat-form-field appearance="standard">
               <mat-label>Sort By:</mat-label>
               <select matNativeControl required>
@@ -19,86 +19,33 @@
   </div>
   <div>
       <mat-grid-list cols="6">
-          <mat-grid-tile [colspan]="4" [rowspan]="6">
+          <mat-grid-tile [colspan]="4" [rowspan]="19">
               <div>
-                <div *ngFor="let DatasetsKaggle of DatasetsKaggleArray">
-                  <p style="color: black;">{{DatasetsKaggle.url}}</p>
-                </div>
-                
-                  <a href="http://localhost:4200/home">
-                    <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                        <mat-card-title-group>
-                          <mat-card-title>Shiba Inu</mat-card-title>
-                          <mat-card-subtitle>Small</mat-card-subtitle>
-                          <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                        </mat-card-title-group>
-                        <mat-card-content>
-                          {{longText}}
-                        </mat-card-content>
-                    </mat-card>
-                  </a>
-                
-                
-                  <!-- <a href="http://localhost:4200/home">
-                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                          <mat-card-title-group>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Small</mat-card-subtitle>
-                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                          </mat-card-title-group>
-                          <mat-card-content>
-                            {{longText}}
-                          </mat-card-content>
-                      </mat-card>
-                  </a>
-                  <a href="http://localhost:4200/home">
-                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                          <mat-card-title-group>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Small</mat-card-subtitle>
-                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                          </mat-card-title-group>
-                          <mat-card-content>
-                            {{longText}}
-                          </mat-card-content>
-                      </mat-card>
-                  </a>
-                  <a href="http://localhost:4200/home">
-                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                          <mat-card-title-group>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Small</mat-card-subtitle>
-                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                          </mat-card-title-group>
-                          <mat-card-content>
-                            {{longText}}
-                          </mat-card-content>
-                      </mat-card>
-                  </a>
-                  <a href="http://localhost:4200/home">
-                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                          <mat-card-title-group>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Small</mat-card-subtitle>
-                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                          </mat-card-title-group>
-                          <mat-card-content>
-                            {{longText}}
-                          </mat-card-content>
-                      </mat-card>
-                  </a>
-                  <a href="http://localhost:4200/home">
-                      <mat-card style="background-color: aqua; margin-bottom: 10px;" class="example-card">
-                          <mat-card-title-group>
-                            <mat-card-title>Shiba Inu</mat-card-title>
-                            <mat-card-subtitle>Small</mat-card-subtitle>
-                            <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                          </mat-card-title-group>
-                          <mat-card-content>
-                            {{longText}}
-                          </mat-card-content>
-                      </mat-card>
-                  </a> -->        
+                <a *ngFor="let datasetsKaggle of datasetsKaggleArray" href="http://localhost:4200/home">
+                  <mat-card style="margin-bottom: 20px; background-color: aliceblue;" class="example-card">
+                      <mat-card-title-group>
+                        <mat-card-title>{{datasetsKaggle.title}}</mat-card-title>
+                        <mat-card-subtitle>{{datasetsKaggle.ref}}</mat-card-subtitle>
+                        <img mat-card-sm-image src="../../../../assets/images/corona.png" >
+                      </mat-card-title-group>
+                      <mat-card-content>
+                        {{datasetsKaggle.subtitle}}
+                        <br>
+                        {{datasetsKaggle.url}}
+                        <div style="float: right;">
+                          <mat-chip-list
+                              cdkDropListOrientation="horizontal">
+                              <mat-chip>
+                                {{datasetsKaggle.viewCount}}
+                              </mat-chip>
+                              <mat-chip>
+                                {{datasetsKaggle.voteCount}}
+                              </mat-chip>
+                          </mat-chip-list>
+                        </div>
+                      </mat-card-content>
+                  </mat-card>
+                </a>
               </div>
           </mat-grid-tile>
           <mat-grid-tile [colspan]="2" [rowspan]="4">

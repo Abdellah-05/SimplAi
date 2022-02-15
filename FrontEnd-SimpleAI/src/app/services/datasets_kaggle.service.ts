@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class DatasetsKaggleService {
 
-  private BASE_URL = 'http://localhost:5000';
-  constructor( private http: HttpClient ) {
+  constructor( private http: HttpClient ) { }
 
-   }
-   
+
+  private BASE_URL = 'http://localhost:5000';
+ 
    getDatasetsKaggle():Observable<any>{
-     return this.http.get(`${this.BASE_URL}/dataset_kaggle`);
+     return this.http.get(`${this.BASE_URL}/dataset/dataset_kaggle`)
    }
 }

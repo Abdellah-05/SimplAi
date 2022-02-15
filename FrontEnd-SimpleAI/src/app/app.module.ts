@@ -42,6 +42,7 @@ import { AddWithGithubComponent } from './second-page/container/add-new-dataset/
 import { AddWithGoogledriveComponent } from './second-page/container/add-new-dataset/add-with-googledrive/add-with-googledrive.component';
 import { AddWithDropboxComponent } from './second-page/container/add-new-dataset/add-with-dropbox/add-with-dropbox.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
