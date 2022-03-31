@@ -1,0 +1,63 @@
+<mat-grid-list cols="6">
+    <mat-grid-tile [colspan]="4" [rowspan]="19">
+        <div>
+          <a *ngFor="let datasetsKaggle of datasetsKaggleArray" href="http://localhost:4200/home">
+            <mat-card style="margin-bottom: 20px; background-color: aliceblue;" class="example-card">
+                <mat-card-title-group>
+                  <mat-card-title>{{datasetsKaggle.title}}</mat-card-title>
+                  <mat-card-subtitle>{{datasetsKaggle.ref}}</mat-card-subtitle>
+                  <img mat-card-sm-image src="../../../../assets/images/corona.png" >
+                </mat-card-title-group>
+                <mat-card-content>
+                  {{datasetsKaggle.subtitle}}
+                  <br>
+                  <a href="">{{datasetsKaggle.url}}</a>
+                  <div style="float: right;">
+                    <mat-chip-list
+                        cdkDropListOrientation="horizontal">
+                        <mat-chip>
+                          {{datasetsKaggle.viewCount}}
+                        </mat-chip>
+                        <mat-chip>
+                          {{datasetsKaggle.voteCount}}
+                        </mat-chip>
+                    </mat-chip-list>
+                  </div>
+                </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="4">
+        <div class="cardUser">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Benmessaoud Abdellah</mat-card-title>
+                  <mat-card-subtitle>Joined 2 mouths ago</mat-card-subtitle>
+                </mat-card-header>
+                <hr>
+                <mat-card-content>
+                  <div style="margin: auto; text-align: center;">
+                    <p class="text_icon">
+                      <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Download :
+                    </p>
+                    <p class="text_icon">45 <mat-icon style="margin-left: 5px;">save_alt</mat-icon></p>
+                    <p class="text_icon">
+                      <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Upload :
+                    </p>
+                    <p class="text_icon">876 <mat-icon style="margin-left: 5px;">publish</mat-icon></p>
+                    <p class="text_icon">
+                      <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Likes :
+                    </p>
+                    <p class="text_icon">1007 <mat-icon style="margin-left: 5px;">thumb_up</mat-icon></p>
+                    <p class="text_icon">
+                      <mat-icon>chevron_right</mat-icon>Datasets and Notebooks Comments :
+                    </p>
+                    <p class="text_icon">78 <mat-icon style="margin-left: 5px;">comment</mat-icon></p>
+                  </div>
+                </mat-card-content>
+              </mat-card>                      
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

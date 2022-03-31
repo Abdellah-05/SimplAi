@@ -27,6 +27,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@ngrx/store": "^13.0.2",
     "angular-material": "^1.2.4",
+    "g": "^2.0.1",
     "mdb-ui-kit": "^3.10.2",
     "ngx-file-drop": "^13.0.0",
     "rxjs": "~7.4.0",
@@ -35,7 +36,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.4",
-    "@angular/cli": "~13.1.4",
+    "@angular/cli": "^13.1.4",
     "@angular/compiler-cli": "~13.1.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",

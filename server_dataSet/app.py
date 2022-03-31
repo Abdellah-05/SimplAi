@@ -1,5 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 #from modules import getDataset
+
+import json
 
 from flask_cors import CORS
 
@@ -15,8 +17,8 @@ import time
 
 class Dataset:
     def __init__(self):
-        os.environ['KAGGLE_USERNAME'] = 'benmessaoud1abdellah'  #'abdellahelaaroub'
-        os.environ['KAGGLE_KEY'] = '0d74a846439df0a0cb3729498ed92582'  #'f6a4b8dfccbbef8c72f5bb2f97429eee'
+        os.environ['KAGGLE_USERNAME'] = 'abdellahelaaroub'  #'abdellahelaaroub'
+        os.environ['KAGGLE_KEY'] = 'f6a4b8dfccbbef8c72f5bb2f97429eee'  #'f6a4b8dfccbbef8c72f5bb2f97429eee'
         self.api = KaggleApi()
         self.api.authenticate()
     
@@ -58,13 +60,29 @@ class Dataset:
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/dataset/dataset_kaggle", methods = ["Get", "POST"])
 
+@app.route("/dataset/dataset_kaggle/<id>", methods = ["Get", "POST"])
+def getDatasetBySearch(id):
+    if request.method == "POST":
+        dataSearch = request.json['searchData']
+    a = str(id)
+    newdata = Dataset()
+    dataAPI = newdata.dataset(a)
+    print(dataAPI)
+    return jsonify(dataAPI)
+
+
+@app.route("/dataset/dataset_kaggle", methods = ["Get", "POST"])
 def getDataset():
+    if request.method == "POST":
+        dataSearch = request.json['searchData']
     a = "iris"
     newdata = Dataset()
     return jsonify(newdata.dataset(a))
-    
 
+
+x = []
+x.append(1)
+# running code 
 if __name__ == '__main__':
     app.run(port=5000, host='127.0.0.1', debug=True)

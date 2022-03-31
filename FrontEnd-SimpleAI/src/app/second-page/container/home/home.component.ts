@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatasetsKaggle } from 'src/app/modules/datasets-kaggle';
 import { DatasetsKaggleService } from 'src/app/services/datasets_kaggle.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,26 +10,23 @@ import { DatasetsKaggleService } from 'src/app/services/datasets_kaggle.service'
 })
 export class HomeComponent implements OnInit {
 
-  a:any; 
+  constructor( public data: DatasetsKaggleService  ) { }
 
+  a:any;
 
-  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-  originally bred for hunting.`;
-  
-  constructor( private datasetKaggleService : DatasetsKaggleService ) { }
+  id="";
 
-  datasetsKaggleArray:DatasetsKaggle [] = [];
+  getId():void{
+    console.log(this.id);
+    this.data.id = this.id;
+  }
+
+  getNull():void{
+    this.id="";
+  }
 
   ngOnInit(): void {
-    this.datasetKaggleService.getDatasetsKaggle().subscribe((data)=>{
-        console.log(data)
-        this.datasetsKaggleArray = data;
-        const NumberResults = this.datasetsKaggleArray.length;
-        console.log(NumberResults);
-      return this.a = NumberResults;
-    },
-    error=>console.log(error));
+  
   }
 
 }

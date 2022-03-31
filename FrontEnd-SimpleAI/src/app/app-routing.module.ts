@@ -8,6 +8,7 @@ import { TryYourModelComponent } from './second-page/container/try-your-model/tr
 
 const routes: Routes = [
   { path: 'home' , component: HomeComponent },
+  { path: 'home/:ref' , component: HomeComponent },
   { path: 'dataset' , component: DatasetComponent },
   { path: 'code' , component: CodeComponent },
   { path: 'question-answer' , component: QuestionAnswerComponent },

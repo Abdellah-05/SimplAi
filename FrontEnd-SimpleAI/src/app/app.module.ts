@@ -41,6 +41,7 @@ import { AddWithMydesktopComponent } from './second-page/container/add-new-datas
 import { AddWithGithubComponent } from './second-page/container/add-new-dataset/add-with-github/add-with-github.component';
 import { AddWithGoogledriveComponent } from './second-page/container/add-new-dataset/add-with-googledrive/add-with-googledrive.component';
 import { AddWithDropboxComponent } from './second-page/container/add-new-dataset/add-with-dropbox/add-with-dropbox.component';
+import { ShowDataComponent } from './second-page/container/home/show-data/show-data.component';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { AddWithDropboxComponent } from './second-page/container/add-new-dataset
     AddWithMydesktopComponent,
     AddWithGithubComponent,
     AddWithGoogledriveComponent,
-    AddWithDropboxComponent
+    AddWithDropboxComponent,
+    ShowDataComponent
   ],
   imports: [
     NgxFileDropModule,

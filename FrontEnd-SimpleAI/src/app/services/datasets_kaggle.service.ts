@@ -9,10 +9,18 @@ export class DatasetsKaggleService {
 
   constructor( private http: HttpClient ) { }
 
+  id="";
 
   private BASE_URL = 'http://localhost:5000';
- 
-   getDatasetsKaggle():Observable<any>{
-     return this.http.get(`${this.BASE_URL}/dataset/dataset_kaggle`)
-   }
+
+  getDatasetsKaggle():Observable<any>{
+    return this.http.get(`${this.BASE_URL}/dataset/dataset_kaggle`)
+  }
+  
+  getDatasetsKaggleBySearching():Observable<any>{
+    return this.http.get(`${this.BASE_URL}/dataset/dataset_kaggle/`+this.id)
+  }
+
+
 }
+
