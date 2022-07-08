@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips'; 
 import { FirstPageComponent } from './first-page/first-page.component';
+import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog'
@@ -91,7 +92,8 @@ import { ShowDataComponent } from './second-page/container/home/show-data/show-d
     StoreModule.forRoot({}, {}),
     FontAwesomeModule,
     MatChipsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
